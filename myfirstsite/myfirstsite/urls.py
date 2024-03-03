@@ -15,8 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+
+from school.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('school/', index),
+    #path('', index),
+    path('', include('school.urls')),
 ]
+
+handler404 = pageNotFound
+# handler400 - невозможно обработать запрос
+# handler403 - доступ запрещён
+# handler500 - ошибка сервера
