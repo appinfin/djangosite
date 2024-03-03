@@ -13,8 +13,6 @@ def archive(request, year):
         # raise Http404()
         # return redirect ('/') #302 URL перемещён временно
         return redirect ('home', permanent = True) #301 URL перемещён постоянно
-
-    
     return HttpResponse(f"АРХИВ - {year}")
 
 def products(request, prodid): #HttpRequest
