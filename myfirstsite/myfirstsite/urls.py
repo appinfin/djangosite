@@ -25,3 +25,8 @@ urlpatterns = [
     #path('', index),
     path('', include('school.urls')),
 ]
+
+handler404 = pageNotFound
+# handler400 - невозможно обработать запрос
+# handler403 - доступ запрещён
+# handler500 - ошибка сервера
