@@ -8,7 +8,11 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
+<<<<<<< HEAD
 set VIRTUAL_ENV=E:\My_app\Django_Python_MyFirstApp\djangosite\.venv
+=======
+set VIRTUAL_ENV=C:\my_apps\djangosite\.venv
+>>>>>>> db4799aea4028afcf5e9d69bc27c4ea74b43e5bb
 
 if not defined PROMPT set PROMPT=$P$G
 
