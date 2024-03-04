@@ -1,7 +1,8 @@
 from django.db import models
 
 # # Create your models here.
-# class Person(models.Model):
-#     first_name = models.CharField(max_length=30)
-#     last_name = models.CharField(max_length=30)
-#     telephone = models.IntegerField()
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    telephone = models.CharField(max_length=11)
+    telephone = models.IntegerField()
