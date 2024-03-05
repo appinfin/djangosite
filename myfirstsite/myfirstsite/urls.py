@@ -24,6 +24,7 @@ urlpatterns = [
     # path('school/', index),
     #path('', index),
     path('', include('school.urls')),
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
 
 handler404 = pageNotFound
