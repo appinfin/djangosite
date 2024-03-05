@@ -3,11 +3,12 @@ from django.shortcuts import redirect, render
 
 # Create your views here.
 # Функции представления страниц
+menu = ["О сайте", "Добавить статью", "Обратная связь", "Войти"]
 def index(request):
-    return render(request, 'school/index.html')
+    return render(request, 'school/index.html', {'menu': menu, 'title': 'Главная страница'})
 
 def about(request):
-    return render(request, 'school/about.html')
+    return render(request, 'school/about.html', {'menu': menu, 'title': 'О нас'})
 
 # def index(request): #HttpRequest
 #     return HttpResponse("SITE SCHOOL \
