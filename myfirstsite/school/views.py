@@ -3,10 +3,16 @@ from django.shortcuts import redirect, render
 
 # Create your views here.
 # Функции представления страниц
-def index(request): #HttpRequest
-    return HttpResponse("SITE SCHOOL \
-                        <br><a href='http://127.0.0.1:8000/prod/4747'>ПРОДУКТЫ</a> \
-                        <br><a href='http://127.0.0.1:8000/archive/2023'>АРХИВЫ</a>")
+def index(request):
+    return render(request, 'school/index.html')
+
+def about(request):
+    return render(request, 'school/about.html')
+
+# def index(request): #HttpRequest
+#     return HttpResponse("SITE SCHOOL \
+#                         <br><a href='http://127.0.0.1:8000/prod/4747'>ПРОДУКТЫ</a> \
+#                         <br><a href='http://127.0.0.1:8000/archive/2023'>АРХИВЫ</a>")
 
 def archive(request, year):
     if int(year) > 2024:
